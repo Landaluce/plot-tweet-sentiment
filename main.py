@@ -262,7 +262,7 @@ def get_sentiment(tweet):
 
 
 def main(search_query, number_tweets, latitude, longitude, radius, units='mi',
-         get_new_tweets=False):
+         get_new_tweets=True):
 
     geocode = "%.2f,%.2f,%d%s" % (latitude, longitude, radius, units)
     file_name = generate_title(search_query=search_query,
