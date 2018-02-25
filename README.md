@@ -33,9 +33,9 @@ Follow step 1 in https://github.com/Landaluce/get-Tweets/blob/master/README.md
 4.1.2 Save your keys in plot-tweet-sentiment/api_credentials.py in a dictionary:
  
     KEY1 = {"consumer_key": "XXXXXXXXXX",
-        "consumer_secret": "XXXXXXXXXX",
-        "access_token": "XXXXXXXXXX-XXXXXXXXXX",
-        "access_token_secret": "XXXXXXXXXX"}
+            "consumer_secret": "XXXXXXXXXX",
+            "access_token": "XXXXXXXXXX-XXXXXXXXXX",
+            "access_token_secret": "XXXXXXXXXX"}
 
 4.1.3 Add this dictionary to TWITTER_API_KEYS TWITTER_API_KEYS:
 
