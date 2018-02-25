@@ -312,7 +312,67 @@ def main(search_query, number_tweets, latitude, longitude, radius, units='mi',
          units=units,
          title=file_name)
 
+def menu():
+    answer = ""
+    while answer != "3":
+        print("\t1. Get new tweets")
+        print("\t2. Plot saved tweets")
+        print("\t3. Exit")
+        answer = input("\tWhat would you like to do? ")
+        if answer == "1":
+            search_query = input("Search query: ")
+            number_tweets = int(input("Number of tweets: "))
+            latitude = float(input("latitude: "))
+            longitude = float(input("longitude: "))
+            radius = int(input("radius: "))
+            units = input("units(mi/km): ")
+            main(search_query=search_query,
+                 number_tweets=number_tweets,
+                 latitude=latitude,  # Geocode of the center of US
+                 longitude=longitude,
+                 radius=radius,
+                 units=units  # radius' units (mi or km)
+                 )
+        elif answer == "2":
+            files = os.listdir("Tweets/")
+            files = [name.split(".p")[0] for name in files]
+            if len(files):
+                count = 1
+                for file in files:
+                    print(str(count) + ".", file)
+                index = int(input("Choose a file: ")) - 1
+                if index < 0 or index >= len(files):
+                    correct = False
+                else:
+                    correct = True
+                while not correct:
+                    index = int(input("incorrect option, please try again:")) - 1
+                    if index < 0 or index >= len(files):
+                        correct = False
+                    else:
+                        correct = True
+                search_query = files[index].split(" ")[0].split(":")[1]
+                latitude = float(files[index].split(" ")[1].split(",")[0].split(":")[1])
+                longitude = float(files[index].split(" ")[1].split(",")[1])
+                radius = int(files[index].split(" ")[1].split(",")[2][0:-2])
+                units = files[index].split(" ")[1].split(",")[2][-2:]
+                main(search_query=search_query,
+                     number_tweets=0,
+                     latitude=latitude,  # Geocode of the center of US
+                     longitude=longitude,
+                     radius=radius,
+                     units=units,  # radius' units (mi or km)
+                     get_new_tweets=False
+                     )
+            else:
+                print(" there are no tweets saved")
+        elif answer != "3":
+            print("Invalid choice, try again")
 
+
+menu()
+
+'''
 main(search_query='SpaceX',
      number_tweets=100,
      latitude=39.83,     # Geocode of the center of US
@@ -320,3 +380,4 @@ main(search_query='SpaceX',
      radius=2200,
      units='mi'          # radius' units (mi or km)
 )
+'''
