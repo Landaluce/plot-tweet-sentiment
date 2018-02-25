@@ -312,6 +312,7 @@ def main(search_query, number_tweets, latitude, longitude, radius, units='mi',
          units=units,
          title=file_name)
 
+
 def menu():
     answer = ""
     while answer != "3":
