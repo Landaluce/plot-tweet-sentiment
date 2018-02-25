@@ -30,7 +30,7 @@ Follow step 1 in https://github.com/Landaluce/get-Tweets/blob/master/README.md
 
 4.1.1 Follow the [twitter startup directions](twitter_startup_directions.pdf)
 
-4.1.2 Save your keys in plot-tweet-sentiment/api_credentials.py in adictionary:
+4.1.2 Save your keys in plot-tweet-sentiment/api_credentials.py in a dictionary:
  
     KEY1 = {"consumer_key": "XXXXXXXXXX",
         "consumer_secret": "XXXXXXXXXX",
