@@ -1,6 +1,6 @@
 # plot-tweet-sentiment
 # Summary
-Gets coordinates of tweets and plots them in Google maps
+Performs sentiment analysis on the tweets' content and plots them in Google maps
 
 # Dependencies
 Required Python 3 packages: pip, tweepy, and bokeh
