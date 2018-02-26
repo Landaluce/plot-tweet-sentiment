@@ -41,7 +41,7 @@ Follow step 1 in https://github.com/Landaluce/get-Tweets/blob/master/README.md
 
 ```TWITTER_API_KEYS = [KEY1]```
 
-4.1.4 (optional but recommended) create multiple twitter accounts and repeat steps 4.1.1 to 4.1.3 with each new account to increase the number of requests you can do. Each account has a limit of requests, and when you reach this limit, the program has to wait for 15 minutes before resuming.If you choose to add more accounts, your list of keys should look like this:
+4.1.4 (optional but recommended) create multiple twitter accounts and repeat steps 4.1.1 to 4.1.3 with each new account to increase the number of requests you can do. Each account has a request limit, that when reached, the program has to wait for 15 minutes before resuming. If you choose to add more accounts, your list of keys should look something like this:
 
 ```TWITTER_API_KEYS = [KEY1, KEY2, KEY3, ...]```
 
