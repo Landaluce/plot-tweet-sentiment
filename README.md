@@ -61,4 +61,11 @@ Follow step 1 in https://github.com/Landaluce/get-Tweets/blob/master/README.md
     
 5.2 Type ```python plot-tweet-sentiment.py``` and hit the ```Enter``` key. 
 
+If you get to this menu:
+
+       1. Get new tweets
+	   2. Plot saved tweets
+	   3. Exit
+	   What would you like to do? 
+      
 You are all set.
